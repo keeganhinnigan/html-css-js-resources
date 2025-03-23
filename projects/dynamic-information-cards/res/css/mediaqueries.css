@@ -1,0 +1,105 @@
+/**
+ *  Authors:  Keegan Hinnigan
+ *  Date:     22/03/2025
+ *  Version:  1.0
+ *  
+ *  Media queries for the website.
+ * 
+ */
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .game-container {
+        flex-direction: column;
+        padding: 15px;
+        margin: 10px 0;
+        transform: none !important;
+    }
+
+    .game-container img {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+        margin: 0 auto 15px;
+    }
+
+    .game-details {
+        width: 100%;
+        padding: 0;
+        min-height: auto;
+    }
+
+    .game-details h2 {
+        font-size: 1.1rem;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .game-details p {
+        -webkit-line-clamp: 4;
+        max-height: 5.2rem; /* (0.9rem * 1.3) * 4 lines */
+        line-height: 1.25;
+        padding: 2px 0;
+        font-size: 0.85rem;
+    }
+
+    .download-btn {
+        width: 100%;
+        max-width: 280px;
+        margin: 15px auto 0;
+        font-size: 0.7rem;
+        padding: 12px;
+    }
+
+    .game-container.right img {
+        order: 0;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .game-container {
+        max-width: 90%;
+    }
+    
+    .game-container img {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .game-details p {
+        -webkit-line-clamp: 5;
+        max-height: 6.5rem; /* (0.9rem * 1.3) * 5 lines */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .game-details h2 {
+        font-size: 1rem;
+    }
+    
+    .game-details p {
+        font-size: 0.8rem;
+        -webkit-line-clamp: 3;
+        max-height: 3.9rem; /* (0.8rem * 1.3) * 3 lines */
+        line-height: 1.3;
+    }
+    
+    .download-btn {
+        padding: 10px;
+    }
+}
+
+@media (hover: none) {
+    .game-container:hover {
+        transform: none;
+    }
+    
+    .download-btn:hover::before {
+        opacity: 0;
+    }
+}
